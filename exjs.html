@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio edades JS</title>
+    <style>
+        .rojo {
+        border: 1px solid rgb(255, 0, 0);
+        width: 150px;
+        height: auto;
+        }
+        .verde{
+            border: 3px solid rgb(0, 255, 13);
+        width: 150px;
+        height: auto;
+        }
+        .negro{
+            border: 3px solid rgb(0, 0, 0);
+        width: 150px;
+        height: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>TU EDAD?</h1>
+    <input class="negro" id="nombre" type="text" placeholder="Pon aqui tu edad">
+    <button id="entrada">Entrar</button>
+    <div id="resultado">
+
+    </div>
+    <script>
+        // 1º jgmjhgjmh
+        // 2º lkjhlkuhlk j
+        // 4º Añadir envento click raton
+        // 5º crar funcion control boton()
+        // 6º console.log("dnetro funcion")
+        // 7º leemos el value del input y lo ponemos en edad
+        // 8º miramos si es mayor o menor a 18
+
+        const inputEdad = document.querySelector("#nombre"); //Creamos la constante del input para poner la edad
+        console.log (inputEdad)
+
+        const inputEntrar = document.querySelector("#entrada") //Creamos la constante del input para verificar la edad
+        console.log (inputEntrar)
+
+        inputEntrar.addEventListener("click", edad); //Le ponemos el evento click al boton
+
+        let resultado = document.querySelector("#resultado") //Creamos la variable para selecionar el id resultado 
+        function edad(){
+            console.log("dentro funcion");
+            if (inputEdad.value>=18){
+            resultado.innerHTML = ("Eres mayor de edad") //para que ponga este mensaje si es mayor
+            resultado.classList.remove("rojo");
+            resultado.classList.add("verde");
+            }
+            else {
+            resultado.innerHTML = ("Eres menor de edad") //para que ponga este mensaje si es menor0
+            resultado.classList.remove("verde");
+            resultado.classList.add("rojo");
+            }
+        }
+
+    </script>
+</body>
+</html>

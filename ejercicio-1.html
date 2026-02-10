@@ -1,21 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <style>
+    .borde {
+      border: 1px solid black;
+      width: 168px;
+      height: 20px;
+    }
+  </style>
+  <body>
     <form action="">
-        <input id="nombre" type="text" placeholder="Pon aqui tu nombre" value="Jose-">
+      <input
+        id="nombre"
+        type="text"
+        placeholder="Pon aqui tu nombre"
+        value="Jose-"
+      />
     </form>
+    <div id="resultado" class="borde"></div>
     <script>
-      const inputNombre=document.querySelector("#nombre") 
-      console.log(inputNombre.placeholder) 
-      inputNombre.value = "Miguel" 
+      const inputNombre=document.querySelector("#nombre")
+      console.log(inputNombre.placeholder)
+      inputNombre.value = "Miguel"
+      let input
       inputNombre.addEventListener("write") {
-        
+
       }
     </script>
-</body>
+  </body>
 </html>
