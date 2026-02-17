@@ -5,20 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicios Java 2</title>
     <style>
-
+        
     </style>
 </head>
 <body>
     <h1>CATALOGO</h1>
     <select name="select" id="coches">
-        <option value="">BMW</option>
-        <option value="">Audi</option>
-        <option value="">Mercedes</option>
-        <option value="">Ferrari</option>
+        <option value="BMW">BMW</option>
+        <option value="Audi">Audi</option>
+        <option value="Mercedes">Mercedes</option>
+        <option value="Ferrari">Ferrari</option>
     </select>
     <button>Ver</button>
+    <div id="imagenes"> </div>
     <script>
+        const select = document.querySelector("#coches");
+        const boton = document.querySelector("button");
+        const imagenes = document.querySelector("#imagenes");
 
+        function mostrarImagenes() {
+            imagenes.innerHTML = "";
+            let coche = select.value;
+
+            if (coche == "BMW") {
+                imagenes.innerHTML = '<img src="images-ex2/BMW.jpg" alt="BMW" width="300">'
+            } else if (coche == "Audi") {
+                imagenes.innerHTML = '<img src="images-ex2/audi.jpg" alt="Audi" width="300">'
+            } else if (coche == "Mercedes") {
+                imagenes.innerHTML = '<img src="images-ex2/Mercedes.jpg" alt="Mercedes" width="300">'
+            } else if (coche == "Ferrari") {
+                imagenes.innerHTML = '<img src="images-ex2/Ferrari.jpg" alt="Ferrari" width="300">'
+            } else {
+                imagenes.innerHTML = "Porfavor, seleccione un coche"
+            }
+        }
+
+        boton.addEventListener("click", mostrarImagenes);
     </script>
 </body>
 </html>
