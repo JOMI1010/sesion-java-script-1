@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mover Cubo</title>
+    <style>
+        #contenedor {
+            width: 600px;
+            height: 200px;
+            border: 2px solid black;
+            position: relative;
+            margin: 50px auto;
+            background-color: rgba(11, 129, 27, 0.808);
+        }
+
+        #cubo {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+            top: 75px; 
+            left: 275px; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Mueve el cubo con las flechas</h1>
+    <div id="contenedor">
+        <div id="cubo"></div>
+    </div>
+
+    <script>
+        const cubo = document.querySelector("#cubo");
+        let posicion = 275; 
+
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "ArrowLeft") {
+                posicion -= 10; 
+                if (posicion < 0) posicion = 0; 
+                cubo.style.left = posicion + "px";
+            } else if (event.key === "ArrowRight") {
+                posicion += 10;
+                if (posicion > 550) posicion = 550; 
+                cubo.style.left = posicion + "px";
+            }
+        });
+    </script>
+</body>
+</html>
