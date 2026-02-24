@@ -5,46 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mover Cubo</title>
     <style>
+        body {
+            background-color: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
         #contenedor {
-            width: 600px;
-            height: 200px;
-            border: 2px solid black;
+            width: 800px;
+            height: 800px;
+            border: 2px solid rgb(0, 255, 76);
             position: relative;
-            margin: 50px auto;
             background-color: rgba(11, 129, 27, 0.808);
         }
 
         #cubo {
-            width: 50px;
-            height: 50px;
+            width: 100px;
+            height: 100px;
             background-color: red;
             position: absolute;
-            top: 75px; 
-            left: 275px; 
+            top: 200px;
+            left: 200px;    
         }
     </style>
 </head>
 <body>
-    <h1>Mueve el cubo con las flechas</h1>
     <div id="contenedor">
         <div id="cubo"></div>
     </div>
 
-    <script>
-        const cubo = document.querySelector("#cubo");
-        let posicion = 275; 
-
-        document.addEventListener("keydown", function(event) {
-            if (event.key === "ArrowLeft") {
-                posicion -= 10; 
-                if (posicion < 0) posicion = 0; 
-                cubo.style.left = posicion + "px";
-            } else if (event.key === "ArrowRight") {
-                posicion += 10;
-                if (posicion > 550) posicion = 550; 
-                cubo.style.left = posicion + "px";
-            }
-        });
-    </script>
+    <script src="index2.js"></script>
 </body>
 </html>
